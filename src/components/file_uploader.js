@@ -79,7 +79,6 @@ function FileUploader() {
       Bucket: S3_BUCKET,
       Key: selectedFile.name,
       Body: selectedFile,
-      ACL: 'public-read', // optional, if you want public file access
     };
 
     s3.upload(params, (err, data) => {
